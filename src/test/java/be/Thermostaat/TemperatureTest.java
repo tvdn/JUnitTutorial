@@ -31,6 +31,20 @@ class TemperatureTest {
     }
 
     @Test
+    @DisplayName("Test isBoiling")
+    void testIsBoiling() {
+        temp.setValue(101f);
+        assertEquals(true,temp.isBoiling());
+    }
+
+    @Test
+    @DisplayName("Test isFreezing")
+    void testIsFreezing() {
+        temp.setValue(-2f);
+        assertEquals(true,temp.isFreezing());
+    }
+
+    @Test
     @DisplayName("Check equals")
     void testEquals() {
         temp2.setValue(23.5f);

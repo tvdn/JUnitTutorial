@@ -1,10 +1,14 @@
 package be.tvdn;
 
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class HelloWorldTest {
 
-    @org.junit.jupiter.api.Test
+    @Test
     void sayHello() {
+        HelloWorld helloWorld = new HelloWorld();
+        assertEquals("Hello World", helloWorld.sayHello());
     }
 }

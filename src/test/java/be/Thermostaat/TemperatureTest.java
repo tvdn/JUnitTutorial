@@ -11,17 +11,22 @@ class TemperatureTest {
 
     @BeforeEach
     void init() {
-         temp = new Temperature(23.5f);
-         temp2 = new Temperature(45.5f);
+         temp = new Temperature(0);
+         temp2 = new Temperature(0);
     }
 
     @Test
     @DisplayName("Check constructor")
-    void Temperature() { assertEquals(23.5f, temp.getValue()); }
+    void Temperature() {
+        temp.setValue(23.5f);
+        assertEquals(23.5f, temp.getValue());
+    }
 
     @Test
     @DisplayName("Check value getter")
-    void testGetValue() { assertEquals(23.5f,temp.getValue()); }
+    void testGetValue() {
+        temp.setValue(23.5f);
+        assertEquals(23.5f,temp.getValue()); }
 
     @Test
     @DisplayName("Check value setter")
@@ -31,23 +36,37 @@ class TemperatureTest {
     }
 
     @Test
-    @DisplayName("Test isBoiling")
-    void testIsBoiling() {
+    @DisplayName("Test isBoilingIsTrue")
+    void testIsBoilingisTrue() {
         temp.setValue(101f);
         assertEquals(true,temp.isBoiling());
     }
 
     @Test
-    @DisplayName("Test isFreezing")
-    void testIsFreezing() {
+    @DisplayName("Test isBoilingIsTrue")
+    void testIsBoilingisFalse() {
+        temp.setValue(10f);
+        assertEquals(false,temp.isBoiling());
+    }
+
+    @Test
+    @DisplayName("Test isFreezingisTrue")
+    void testIsFreezingIsTrue() {
         temp.setValue(-2f);
         assertEquals(true,temp.isFreezing());
     }
 
     @Test
+    @DisplayName("Test isFreezingisFalse")
+    void testIsFreezingisFalse() {
+        temp.setValue(2f);
+        assertEquals(false,temp.isFreezing());
+    }
+
+    @Test
     @DisplayName("Check equals")
     void testEquals() {
-        temp2.setValue(23.5f);
+        temp2.setValue(0f);
         assertEquals(temp, temp2);
     }
 

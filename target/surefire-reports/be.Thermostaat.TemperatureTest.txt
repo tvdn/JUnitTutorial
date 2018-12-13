@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: be.Thermostaat.TemperatureTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.016 s <<< FAILURE! - in be.Thermostaat.TemperatureTest
+be.Thermostaat.TemperatureTest  Time elapsed: 0.016 s  <<< ERROR!
+org.junit.platform.commons.JUnitException: @BeforeAll method 'void be.Thermostaat.TemperatureTest.init()' must be static unless the test class is annotated with @TestInstance(Lifecycle.PER_CLASS).
+

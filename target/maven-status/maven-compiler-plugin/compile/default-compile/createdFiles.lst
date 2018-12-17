@@ -1,2 +1,5 @@
 be\Thermostaat\Temperature.class
+be\ThermostatStubs\Heating.class
+be\ThermostatStubs\Thermostat.class
 be\tvdn\HelloWorld.class
+be\ThermostatStubs\Sensor.class

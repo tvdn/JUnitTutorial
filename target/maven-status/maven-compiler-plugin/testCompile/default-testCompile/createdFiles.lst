@@ -1,2 +1,6 @@
+be\ThermostatStubs\ThermostatTest$1.class
+be\ThermostatStubs\ThermostatTest$SensorStub.class
+be\ThermostatStubs\ThermostatTest.class
 be\tvdn\HelloWorldTest.class
+be\ThermostatStubs\ThermostatTest$HeatingStub.class
 be\Thermostaat\TemperatureTest.class

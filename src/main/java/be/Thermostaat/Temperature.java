@@ -6,15 +6,16 @@ public class Temperature {
     private float value;
 
     public Temperature(float t) {
-        this.value = t;
+        this.setValue(t);
     }
 
     public float getValue() {
         return value;
     }
 
-    public void setValue(float value) {
-        this.value = value;
+    public void setValue(float value) throws InvalidTemperatureException {
+        if (value < -273.15f) throw new InvalidTemperatureException("Temperature too low");
+        else this.value = value;
     }
 
     public boolean isBoiling() {

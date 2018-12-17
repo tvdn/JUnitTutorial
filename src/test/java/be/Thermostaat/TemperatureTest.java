@@ -17,7 +17,7 @@ class TemperatureTest {
 
     @Test
     @DisplayName("Check constructor")
-    void Temperature() {
+    void Temperature(){
         temp.setValue(23.5f);
         assertEquals(23.5f, temp.getValue());
     }
@@ -44,16 +44,32 @@ class TemperatureTest {
 
     @Test
     @DisplayName("Test isBoilingIsTrue")
-    void testIsBoilingisFalse() {
+    void testIsBoilingisFalse()  {
         temp.setValue(10f);
         assertEquals(false,temp.isBoiling());
     }
 
     @Test
     @DisplayName("Test isFreezingisTrue")
-    void testIsFreezingIsTrue() {
+    void testIsFreezingIsTrue()  {
         temp.setValue(-2f);
         assertEquals(true,temp.isFreezing());
+    }
+
+    @Test
+    void testException() {
+        Temperature t = new Temperature(0);
+        assertThrows(InvalidTemperatureException.class, () -> t.setValue(-400F));
+    }
+
+    @Test
+    void testNoException() {
+        assertDoesNotThrow(() -> temp.setValue(-200));
+    }
+
+    @Test
+    void testIfConstructorThrowsAnExceptionsBecauseItIsVeryImportantToCheckThisIfThisDoesOrDOesNotHappen() {
+        assertThrows(InvalidTemperatureException.class, () -> new Temperature(-400f));
     }
 
     @Test
